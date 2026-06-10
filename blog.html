@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Maptech Company Ltd — ICT Insights Tanzania</title>
+<meta name="description" content="ICT insights, cybersecurity tips, web development trends and tech guides from Maptech Company Ltd — Tanzania's leading ICT solutions provider.">
+<link rel="icon" href="assets/images/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/maptech.css">
+</head>
+<body data-page="blog">
+
+<a href="https://wa.me/255712785375" class="wa-float" target="_blank" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.114.551 4.098 1.514 5.82L.044 23.956a.5.5 0 00.608.608l6.175-1.457A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.946 9.946 0 01-5.19-1.35l-.37-.21-3.834.904.918-3.786-.23-.38A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#x2191;</button>
+<div id="cookie-banner">
+  <p>We use cookies to enhance your experience. <a href="cookie-policy.html">Cookie Policy</a>.</p>
+  <div class="cookie-btns">
+    <button class="cbtn cbtn-accept" onclick="acceptCookies()">Accept All</button>
+    <button class="cbtn cbtn-reject" onclick="rejectCookies()">Reject</button>
+  </div>
+</div>
+
+<div class="mob-nav" id="mobNav">
+  <div class="mob-header">
+    <a href="index.html" class="logo">
+      <div class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" width="16" height="16"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"/><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="8.5" x2="22" y2="8.5"/></svg></div>
+      <div class="logo-name"><span>MAP</span>TECH</div>
+    </a>
+    <button class="mob-close" onclick="closeMob()">&#x2715;</button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Our Services</a>
+  <a href="training.html">Training Portal</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html">Contact Us</a>
+  <div style="margin-top:20px"><a href="contact.html" class="btn-cta" style="width:100%;justify-content:center;display:flex">Get Free Consultation</a></div>
+</div>
+
+<nav id="mainNav" class="light">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="assets/images/MapTech-logo.png" alt="Maptech Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="logo-fallback" style="display:none">
+        <div class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" width="16" height="16"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"/><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="8.5" x2="22" y2="8.5"/></svg></div>
+        <div class="logo-name"><span>MAP</span>TECH</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="training.html">Training</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="nav-cta">Get Free Quote</a>
+    <button class="hamburger" onclick="openMob()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="ph-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Blog</div>
+    <h1>ICT Insights &amp; Tech Trends</h1>
+    <p>Practical guides, cybersecurity tips and web development trends to keep you informed in a fast-evolving digital world.</p>
+  </div>
+</div>
+
+<section>
+  <div class="si">
+    <div class="blog-grid">
+      <div class="blog-card fade-up">
+        <div class="blog-thumb bt1">&#x1F310;</div>
+        <div class="blog-body">
+          <div class="blog-meta"><span class="blog-cat bc-blue">Web Dev</span><span class="blog-date">May 2025</span></div>
+          <h3>Why Every Tanzanian Business Needs a Professional Website in 2025</h3>
+          <p>Your website is your most powerful sales asset. Here's the business case for a professionally engineered online presence in Tanzania.</p>
+          <span class="blog-more">Read article &#x2192;</span>
+        </div>
+      </div>
+      <div class="blog-card fade-up">
+        <div class="blog-thumb bt2">&#x1F512;</div>
+        <div class="blog-body">
+          <div class="blog-meta"><span class="blog-cat bc-red">Cybersecurity</span><span class="blog-date">April 2025</span></div>
+          <h3>5 Cybersecurity Threats Targeting Tanzanian Businesses Right Now</h3>
+          <p>From spear-phishing to ransomware — understand the threats and the practical defences your business needs today.</p>
+          <span class="blog-more">Read article &#x2192;</span>
+        </div>
+      </div>
+      <div class="blog-card fade-up">
+        <div class="blog-thumb bt3">&#x1F4E1;</div>
+        <div class="blog-body">
+          <div class="blog-meta"><span class="blog-cat bc-blue">Networking</span><span class="blog-date">March 2025</span></div>
+          <h3>How to Build a Resilient Office Network: An Engineer's Guide</h3>
+          <p>From topology planning to redundancy — what enterprise network design looks like in practice for Tanzanian businesses.</p>
+          <span class="blog-more">Read article &#x2192;</span>
+        </div>
+      </div>
+      <div class="blog-card fade-up">
+        <div class="blog-thumb bt4">&#x1F393;</div>
+        <div class="blog-body">
+          <div class="blog-meta"><span class="blog-cat bc-blue">Training</span><span class="blog-date">February 2025</span></div>
+          <h3>Top ICT Certifications That Get You Hired in Tanzania in 2025</h3>
+          <p>CCNA, cybersecurity, web development — which certifications carry the most weight with Tanzania's employers right now.</p>
+          <span class="blog-more">Read article &#x2192;</span>
+        </div>
+      </div>
+      <div class="blog-card fade-up">
+        <div class="blog-thumb bt5">&#x1F4F7;</div>
+        <div class="blog-body">
+          <div class="blog-meta"><span class="blog-cat bc-red">Security</span><span class="blog-date">January 2025</span></div>
+          <h3>CCTV Buyer's Guide: Choosing the Right Surveillance System</h3>
+          <p>Camera resolution, storage types, night vision and AI analytics — what to specify and what to avoid when buying CCTV.</p>
+          <span class="blog-more">Read article &#x2192;</span>
+        </div>
+      </div>
+      <div class="blog-card fade-up">
+        <div class="blog-thumb bt6">&#x1F3A8;</div>
+        <div class="blog-body">
+          <div class="blog-meta"><span class="blog-cat bc-green">Branding</span><span class="blog-date">December 2024</span></div>
+          <h3>Why Your Logo is More Than Just a Pretty Picture</h3>
+          <p>Strong brand identity goes beyond aesthetics. Learn how thoughtful branding builds trust and drives customer loyalty.</p>
+          <span class="blog-more">Read article &#x2192;</span>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px">
+      <button class="btn-cta-out" style="border-color:var(--gray-200);color:var(--gray-600)">Load More Articles</button>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light">
+  <div class="si" style="max-width:540px;text-align:center">
+    <div class="stag fade-up" style="margin-bottom:12px">Newsletter</div>
+    <div class="section-title fade-up" style="font-size:26px;margin-bottom:10px">Get ICT Tips in Your Inbox</div>
+    <p class="section-sub fade-up" style="margin-bottom:26px">Monthly tech insights and Maptech updates. No spam, unsubscribe anytime.</p>
+    <div class="nl fade-up" style="max-width:420px;margin:0 auto">
+      <input type="email" placeholder="your@email.com">
+      <button>Subscribe &#x2192;</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fi">
+    <div class="fb">
+      <div class="fb-logo"><span>MAP</span>TECH</div>
+      <p>Tanzania's trusted ICT partner — delivering cybersecurity, web development, networking, CCTV, graphic design and professional training to businesses across the country.</p>
+      <div class="fci">&#x1F4CD; Mkwepu Street, Dar es Salaam, Tanzania</div>
+      <div class="fci">&#x1F4DE; +(255) 712 785 375</div>
+      <div class="fci">&#x2709;&#xFE0F; support@maptech.co.tz</div>
+      <div class="fb-socials">
+        <a href="https://web.facebook.com/maptechtz/" target="_blank" class="fsb">f</a>
+        <a href="https://www.instagram.com/maptech_tz/" target="_blank" class="fsb">ig</a>
+        <a href="https://x.com/maptech_tz" target="_blank" class="fsb">X</a>
+        <a href="https://www.youtube.com/@maptechtz/videos" target="_blank" class="fsb">&#x25B6;</a>
+        <a href="https://github.com/maptechtz-developers" target="_blank" class="fsb">gh</a>
+      </div>
+    </div>
+    <div class="fc">
+      <h4>Services</h4>
+      <a href="services.html">Cybersecurity</a>
+      <a href="services.html">Web Development</a>
+      <a href="services.html">Graphic Design</a>
+      <a href="services.html">IT Networking</a>
+      <a href="services.html">CCTV &amp; Security</a>
+      <a href="training.html">ICT Training</a>
+    </div>
+    <div class="fc">
+      <h4>Company</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
+    </div>
+    <div class="fc fn">
+      <h4>Newsletter</h4>
+      <p>ICT insights and Maptech updates. No spam, unsubscribe anytime.</p>
+      <div class="nl"><input type="email" placeholder="Your email address"><button>&#x2192;</button></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Maptech Company Ltd. All rights reserved.</p>
+    <div>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms &amp; Conditions</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/maptech.js"></script>
+</body>
+</html>

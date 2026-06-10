@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Training Portal | Maptech Company Ltd — ICT Courses Tanzania</title>
+<meta name="description" content="Professional ICT training in Dar es Salaam — CCNA, Cybersecurity, Web Development, Graphic Design, Digital Marketing. 500+ graduates. Maptech Company Ltd.">
+<link rel="icon" href="assets/images/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/maptech.css">
+</head>
+<body data-page="training">
+
+<!-- Top Info Bar -->
+<div class="top-bar">
+  <div class="tb-inner">
+    <div class="tb-group">
+      <span class="tb-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.5 1.18 2 2 0 012.49-.5h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.06 6.06l1.78-1.78a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:+255712785375">+255 712 785 375</a></span>
+      <span class="tb-sep"></span>
+      <span class="tb-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Mkwepu Street, Dar es Salaam</span>
+    </div>
+    <div class="tb-group">
+      <span class="tb-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:support@maptech.co.tz">support@maptech.co.tz</a></span>
+      <span class="tb-sep"></span>
+      <span class="tb-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Mon-Fri: 8:00am - 5:00pm</span>
+    </div>
+  </div>
+</div>
+<a href="https://wa.me/255712785375" class="wa-float" target="_blank" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.114.551 4.098 1.514 5.82L.044 23.956a.5.5 0 00.608.608l6.175-1.457A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.946 9.946 0 01-5.19-1.35l-.37-.21-3.834.904.918-3.786-.23-.38A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#x2191;</button>
+<div id="cookie-banner">
+  <p>We use cookies to enhance your experience. <a href="cookie-policy.html">Cookie Policy</a>.</p>
+  <div class="cookie-btns">
+    <button class="cbtn cbtn-accept" onclick="acceptCookies()">Accept All</button>
+    <button class="cbtn cbtn-reject" onclick="rejectCookies()">Reject</button>
+  </div>
+</div>
+
+<div class="mob-nav" id="mobNav">
+  <div class="mob-header">
+    <a href="index.html" class="logo">
+      <div class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" width="16" height="16"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"/><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="8.5" x2="22" y2="8.5"/></svg></div>
+      <div class="logo-name"><span>MAP</span>TECH</div>
+    </a>
+    <button class="mob-close" onclick="closeMob()">&#x2715;</button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Our Services</a>
+  <a href="training.html">Training Portal</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html">Contact Us</a>
+  <div style="margin-top:20px"><a href="contact.html" class="btn-cta" style="width:100%;justify-content:center;display:flex">Get Free Consultation</a></div>
+</div>
+
+<nav id="mainNav" class="light">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="assets/images/MapTech-logo.png" alt="Maptech Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="logo-fallback" style="display:none">
+        <div class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" width="16" height="16"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"/><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="8.5" x2="22" y2="8.5"/></svg></div>
+        <div class="logo-name"><span>MAP</span>TECH</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-item">
+        <a href="about.html">About
+          <svg class="nav-chevron" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 1l4 4 4-4"/></svg>
+        </a>
+        <div class="nav-drop">
+          <a href="about.html#story" class="drop-item"><span class="drop-item-ico">&#x1F4D6;</span><span class="drop-item-text"><strong>Our Story</strong><span>How Maptech was founded &amp; grew</span></span></a>
+          <a href="about.html#purpose" class="drop-item"><span class="drop-item-ico">&#x1F3AF;</span><span class="drop-item-text"><strong>Our Purpose</strong><span>Mission, vision &amp; what drives us</span></span></a>
+          <a href="about.html#team" class="drop-item"><span class="drop-item-ico">&#x1F465;</span><span class="drop-item-text"><strong>Our People &amp; Team</strong><span>Meet the certified experts behind Maptech</span></span></a>
+          <a href="about.html#why" class="drop-item"><span class="drop-item-ico">&#x2B50;</span><span class="drop-item-text"><strong>Why Choose Us</strong><span>What sets Maptech apart</span></span></a>
+          <a href="about.html#values" class="drop-item"><span class="drop-item-ico">&#x1F91D;</span><span class="drop-item-text"><strong>Our Values</strong><span>Principles that guide every project</span></span></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="services.html">Services
+          <svg class="nav-chevron" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 1l4 4 4-4"/></svg>
+        </a>
+        <div class="nav-drop">
+          <span class="drop-group-label">&#x1F512; Security &amp; Digital</span>
+          <a href="services.html#svc-cyber" class="drop-item"><span class="drop-item-ico">&#x1F512;</span><span class="drop-item-text"><strong>Cybersecurity</strong><span>Firewalls, audits &amp; threat protection</span></span></a>
+          <a href="services.html#svc-web" class="drop-item"><span class="drop-item-ico">&#x1F310;</span><span class="drop-item-text"><strong>Web Design &amp; Software Dev</strong><span>Websites, apps &amp; custom software</span></span></a>
+          <a href="services.html#svc-hosting" class="drop-item"><span class="drop-item-ico">&#x1F4BB;</span><span class="drop-item-text"><strong>Web Hosting &amp; Domain Registration</strong><span>Managed hosting, SSL &amp; domain names</span></span></a>
+          <div class="drop-divider"></div>
+          <span class="drop-group-label">&#x1F3A8; Design &amp; Infrastructure</span>
+          <a href="services.html#svc-design" class="drop-item"><span class="drop-item-ico">&#x1F3A8;</span><span class="drop-item-text"><strong>Graphic Design &amp; Branding</strong><span>Branding, print &amp; digital assets</span></span></a>
+          <a href="services.html#svc-network" class="drop-item"><span class="drop-item-ico">&#x1F4E1;</span><span class="drop-item-text"><strong>IT Networking</strong><span>LAN/WAN, cabling &amp; infrastructure</span></span></a>
+          <a href="services.html#svc-cctv" class="drop-item"><span class="drop-item-ico">&#x1F4F7;</span><span class="drop-item-text"><strong>CCTV &amp; Security Systems</strong><span>IP cameras, access control &amp; alarms</span></span></a>
+          <div class="drop-divider"></div>
+          <span class="drop-group-label">&#x1F527; Support &amp; Training</span>
+          <a href="services.html#svc-computer" class="drop-item"><span class="drop-item-ico">&#x1F5A5;&#xFE0F;</span><span class="drop-item-text"><strong>Computer Maintenance &amp; Supply</strong><span>Repairs, parts &amp; accessories</span></span></a>
+          <a href="services.html#svc-printer" class="drop-item"><span class="drop-item-ico">&#x1F5A8;&#xFE0F;</span><span class="drop-item-text"><strong>Printer Maintenance &amp; Supply</strong><span>Repairs, toner &amp; accessories</span></span></a>
+          <a href="training.html" class="drop-item"><span class="drop-item-ico">&#x1F393;</span><span class="drop-item-text"><strong>ICT Training</strong><span>Certified courses for individuals &amp; teams</span></span></a>
+        </div>
+      </div>
+      <a href="training.html" class="active">Training</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="nav-cta">Get Free Quote</a>
+    <button class="hamburger" onclick="openMob()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="ph-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Training Portal</div>
+    <h1>Professional ICT Training Portal</h1>
+    <p>Industry-relevant, hands-on short courses for individuals and corporate teams. 500+ graduates ready for Tanzania's digital economy.</p>
+  </div>
+</div>
+
+<section>
+  <div class="si">
+    <div class="training-layout">
+      <div class="tl-left fade-up">
+        <div class="stag" style="margin-bottom:14px">Active Courses</div>
+        <img src="assets/images/training-ict-classroom-africa.jpg" alt="ICT training classroom Tanzania - Maptech" style="width:100%;height:260px;object-fit:cover;object-position:center;border-radius:14px;margin-bottom:20px;display:block">
+        <h2>Practical Skills.<br>Certified Results.<br>Real Career Impact.</h2>
+        <p>All courses are delivered by working ICT professionals using hands-on labs and industry-standard equipment. Intake runs monthly. Certificates awarded on completion. Corporate group bookings available.</p>
+        <div class="course-list">
+
+          <details class="course-acc">
+            <summary class="course">
+              <div class="c-icon">&#x1F4E1;</div>
+              <div style="flex:1">
+                <div class="c-name">Cisco CCNA — Network Engineering</div>
+                <div class="c-meta"><span>&#x23F1; 3 Months</span><span>&#x1F465; Beginner–Int.</span><span>&#x1F3C6; Cisco Cert Prep</span></div>
+              </div>
+              <span class="c-enroll" onclick="enrollIn('Cisco CCNA — Network Engineering');event.stopPropagation();">Enroll &#x2192;</span>
+            </summary>
+            <div class="course-body">
+              <div class="topics-label">Topics Covered</div>
+              <div class="course-topics">
+                <span class="ct">Intro to Networking</span><span class="ct">OSI &amp; TCP/IP Models</span><span class="ct">IP Addressing &amp; Subnetting</span><span class="ct">Routing Protocols (OSPF, EIGRP)</span><span class="ct">Switching &amp; VLANs</span><span class="ct">WAN Technologies</span><span class="ct">Network Security Basics</span><span class="ct">Cisco IOS Commands</span><span class="ct">Troubleshooting Techniques</span><span class="ct">CCNA Exam Preparation</span>
+              </div>
+            </div>
+          </details>
+
+          <details class="course-acc">
+            <summary class="course">
+              <div class="c-icon">&#x1F512;</div>
+              <div style="flex:1">
+                <div class="c-name">Cybersecurity Fundamentals</div>
+                <div class="c-meta"><span>&#x23F1; 6 Weeks</span><span>&#x1F465; All Levels</span><span>&#x1F3C6; Certificate</span></div>
+              </div>
+              <span class="c-enroll" onclick="enrollIn('Cybersecurity Fundamentals');event.stopPropagation();">Enroll &#x2192;</span>
+            </summary>
+            <div class="course-body">
+              <div class="topics-label">Topics Covered</div>
+              <div class="course-topics">
+                <span class="ct">Cybersecurity Concepts</span><span class="ct">Common Threats &amp; Attack Vectors</span><span class="ct">Network Security Principles</span><span class="ct">Firewalls &amp; IDS/IPS</span><span class="ct">Password &amp; Authentication Security</span><span class="ct">Social Engineering Awareness</span><span class="ct">Data Encryption Basics</span><span class="ct">Incident Response</span><span class="ct">Security Auditing</span><span class="ct">Best Practices &amp; Compliance</span>
+              </div>
+            </div>
+          </details>
+
+          <details class="course-acc">
+            <summary class="course">
+              <div class="c-icon">&#x1F310;</div>
+              <div style="flex:1">
+                <div class="c-name">Web Development (HTML/CSS/JS/PHP)</div>
+                <div class="c-meta"><span>&#x23F1; 3 Months</span><span>&#x1F465; Beginner</span><span>&#x1F3C6; Certificate</span></div>
+              </div>
+              <span class="c-enroll" onclick="enrollIn('Web Development (HTML/CSS/JS/PHP)');event.stopPropagation();">Enroll &#x2192;</span>
+            </summary>
+            <div class="course-body">
+              <div class="topics-label">Topics Covered</div>
+              <div class="course-topics">
+                <span class="ct">HTML5 Structure &amp; Semantics</span><span class="ct">CSS3 Styling &amp; Flexbox/Grid</span><span class="ct">Responsive &amp; Mobile Design</span><span class="ct">JavaScript Fundamentals</span><span class="ct">DOM Manipulation</span><span class="ct">PHP Programming Basics</span><span class="ct">MySQL Database Design</span><span class="ct">Form Handling &amp; Validation</span><span class="ct">Building Complete Websites</span><span class="ct">Web Hosting &amp; Deployment</span>
+              </div>
+            </div>
+          </details>
+
+          <details class="course-acc">
+            <summary class="course">
+              <div class="c-icon">&#x1F3A8;</div>
+              <div style="flex:1">
+                <div class="c-name">Graphic Design &amp; Adobe Suite</div>
+                <div class="c-meta"><span>&#x23F1; 6 Weeks</span><span>&#x1F465; Beginner</span><span>&#x1F3C6; Certificate</span></div>
+              </div>
+              <span class="c-enroll" onclick="enrollIn('Graphic Design &amp; Adobe Suite');event.stopPropagation();">Enroll &#x2192;</span>
+            </summary>
+            <div class="course-body">
+              <div class="topics-label">Topics Covered</div>
+              <div class="course-topics">
+                <span class="ct">Design Principles &amp; Theory</span><span class="ct">Typography &amp; Color Theory</span><span class="ct">Adobe Photoshop (Photo Editing)</span><span class="ct">Adobe Illustrator (Vector Design)</span><span class="ct">Adobe InDesign (Layouts)</span><span class="ct">Logo &amp; Brand Identity Design</span><span class="ct">Social Media Graphics</span><span class="ct">Flyer &amp; Poster Design</span><span class="ct">Print Design &amp; Production</span><span class="ct">Client Presentation Skills</span>
+              </div>
+            </div>
+          </details>
+
+          <details class="course-acc">
+            <summary class="course">
+              <div class="c-icon">&#x1F4F1;</div>
+              <div style="flex:1">
+                <div class="c-name">Digital Marketing &amp; SEO</div>
+                <div class="c-meta"><span>&#x23F1; 4 Weeks</span><span>&#x1F465; All Levels</span><span>&#x1F3C6; Certificate</span></div>
+              </div>
+              <span class="c-enroll" onclick="enrollIn('Digital Marketing &amp; SEO');event.stopPropagation();">Enroll &#x2192;</span>
+            </summary>
+            <div class="course-body">
+              <div class="topics-label">Topics Covered</div>
+              <div class="course-topics">
+                <span class="ct">Digital Marketing Strategy</span><span class="ct">Search Engine Optimization (SEO)</span><span class="ct">Google Analytics &amp; Ads</span><span class="ct">Facebook &amp; Instagram Ads</span><span class="ct">Social Media Marketing</span><span class="ct">Email Marketing Campaigns</span><span class="ct">Content Marketing &amp; Blogging</span><span class="ct">WhatsApp Business Marketing</span><span class="ct">Measuring ROI &amp; KPIs</span><span class="ct">Building an Online Brand</span>
+              </div>
+            </div>
+          </details>
+
+          <details class="course-acc">
+            <summary class="course">
+              <div class="c-icon">&#x1F4BB;</div>
+              <div style="flex:1">
+                <div class="c-name">Computer Basics &amp; Microsoft Office</div>
+                <div class="c-meta"><span>&#x23F1; 2 Weeks</span><span>&#x1F465; Absolute Beginner</span><span>&#x1F3C6; Certificate</span></div>
+              </div>
+              <span class="c-enroll" onclick="enrollIn('Computer Basics &amp; Microsoft Office');event.stopPropagation();">Enroll &#x2192;</span>
+            </summary>
+            <div class="course-body">
+              <div class="topics-label">Topics Covered</div>
+              <div class="course-topics">
+                <span class="ct">Computer Hardware &amp; Components</span><span class="ct">Windows Operating System</span><span class="ct">File &amp; Folder Management</span><span class="ct">Microsoft Word (Documents)</span><span class="ct">Microsoft Excel (Spreadsheets)</span><span class="ct">Microsoft PowerPoint (Presentations)</span><span class="ct">Internet &amp; Email Usage</span><span class="ct">Online Safety &amp; Privacy</span><span class="ct">Printing &amp; Scanning</span><span class="ct">Basic Troubleshooting</span>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+      <div class="form-card fade-up" id="enroll-form">
+        <h3>Register for a Course</h3>
+        <p>Fill in your details and we'll confirm your enrolment and send the full schedule.</p>
+        <form onsubmit="handleForm(event,this)" action="forms/contact.php" method="POST">
+          <div class="fg"><div class="form-row">
+            <div><label>Full Name *</label><input name="name" type="text" placeholder="Your full name" required></div>
+            <div><label>Phone *</label><input name="phone" type="tel" placeholder="+255 7XX XXX XXX" required></div>
+          </div></div>
+          <div class="fg"><label>Email Address</label><input name="email" type="email" placeholder="your@email.com"></div>
+          <div class="fg"><label>Select Course *</label>
+            <select name="course" id="course-select" required>
+              <option value="">Choose a course...</option>
+              <option>Cisco CCNA — Network Engineering</option>
+              <option>Cybersecurity Fundamentals</option>
+              <option>Web Development (HTML/CSS/JS/PHP)</option>
+              <option>Graphic Design &amp; Adobe Suite</option>
+              <option>Digital Marketing &amp; SEO</option>
+              <option>Computer Basics &amp; Microsoft Office</option>
+              <option>Corporate Group Booking</option>
+            </select>
+          </div>
+          <div class="fg"><label>Enrolment Type</label>
+            <select name="type">
+              <option>Individual Student</option>
+              <option>Corporate Group (2–10 staff)</option>
+              <option>Corporate Group (10+ staff)</option>
+            </select>
+          </div>
+          <div class="fg"><label>Questions or Requirements</label><textarea name="message" placeholder="Questions about curriculum, schedule, fees or group rates..."></textarea></div>
+          <button type="submit" class="btn-submit">Submit Registration &#x2192;</button>
+          <p class="form-note">We'll contact you within 24 hours to confirm your place and share payment details.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light">
+  <div class="si">
+    <div class="sh fade-up"><div class="stag">Why Train with Maptech</div><div class="section-title">500+ Graduates. Real Outcomes.</div></div>
+    <div class="svc-grid">
+      <div class="svc-card fade-up"><div class="svc-icon ic-blue">&#x1F468;&#x200D;&#x1F3EB;</div><h3>Certified Practitioners</h3><p>Trainers are working engineers and developers who teach from real project experience, not just textbooks.</p></div>
+      <div class="svc-card fade-up"><div class="svc-icon ic-green">&#x1F5A5;&#xFE0F;</div><h3>Hands-On Labs</h3><p>Every course includes practical lab sessions using industry-standard hardware and software environments.</p></div>
+      <div class="svc-card fade-up"><div class="svc-icon ic-amber">&#x1F4DC;</div><h3>Recognised Certificates</h3><p>Maptech certificates are respected by employers across Tanzania. CCNA prep leads to Cisco certification.</p></div>
+      <div class="svc-card fade-up"><div class="svc-icon ic-purple">&#x1F3E2;</div><h3>Corporate Packages</h3><p>Custom group programmes for corporate teams — delivered at our facility or on-site at your office.</p></div>
+      <div class="svc-card fade-up"><div class="svc-icon ic-teal">&#x1F4C5;</div><h3>Flexible Schedules</h3><p>Morning, afternoon and weekend intake options for both working professionals and full-time students.</p></div>
+      <div class="svc-card fade-up"><div class="svc-icon ic-red">&#x1F4BC;</div><h3>Career Support</h3><p>We connect high-performing graduates with job opportunities and internships through our employer network.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fi">
+    <div class="fb">
+      <div class="fb-logo"><span>MAP</span>TECH</div>
+      <p>Tanzania's trusted ICT partner — delivering cybersecurity, web development, networking, CCTV, graphic design and professional training to businesses across the country.</p>
+      <div class="fci">&#x1F4CD; Mkwepu Street, Dar es Salaam, Tanzania</div>
+      <div class="fci">&#x1F4DE; +(255) 712 785 375</div>
+      <div class="fci">&#x2709;&#xFE0F; support@maptech.co.tz</div>
+      <div class="fb-socials">
+        <a href="https://web.facebook.com/maptechtz/" target="_blank" class="fsb">f</a>
+        <a href="https://www.instagram.com/maptech_tz/" target="_blank" class="fsb">ig</a>
+        <a href="https://x.com/maptech_tz" target="_blank" class="fsb">X</a>
+        <a href="https://www.youtube.com/@maptechtz/videos" target="_blank" class="fsb">&#x25B6;</a>
+        <a href="https://github.com/maptechtz-developers" target="_blank" class="fsb">gh</a>
+      </div>
+    </div>
+    <div class="fc">
+      <h4>Services</h4>
+      <a href="services.html">Cybersecurity</a>
+      <a href="services.html">Web Development</a>
+      <a href="services.html">Graphic Design</a>
+      <a href="services.html">IT Networking</a>
+      <a href="services.html">CCTV &amp; Security</a>
+      <a href="training.html">ICT Training</a>
+    </div>
+    <div class="fc">
+      <h4>Company</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
+    </div>
+    <div class="fc fn">
+      <h4>Newsletter</h4>
+      <p>ICT insights and Maptech updates. No spam, unsubscribe anytime.</p>
+      <div class="nl"><input type="email" placeholder="Your email address"><button>&#x2192;</button></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Maptech Company Ltd. All rights reserved.</p>
+    <div>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms &amp; Conditions</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/maptech.js"></script>
+<script>
+functio
+</body>
+</html>
