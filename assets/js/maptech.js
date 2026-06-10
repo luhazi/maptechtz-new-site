@@ -46,10 +46,16 @@ const io = new IntersectionObserver(function(entries){
       io.unobserve(en.target);
     }
   });
-}, { threshold: 0.15 });
+}, { threshold: 0.05, rootMargin: '0px 0px -30px 0px' });
 
 document.querySelectorAll('.fade-up, .fade-in').forEach(function(el){
-  io.observe(el);
+  // Immediately show elements already in viewport on page load
+  var rect = el.getBoundingClientRect();
+  if(rect.top < window.innerHeight && rect.bottom > 0){
+    el.classList.add('visible');
+  } else {
+    io.observe(el);
+  }
 });
 
 // ── COOKIE BANNER ────────────────────────────────────
