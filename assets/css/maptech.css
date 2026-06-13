@@ -108,7 +108,8 @@ nav.light .hamburger span{background:var(--gray-700)}
 .nav-item:hover .nav-drop{opacity:1;pointer-events:auto;transform:translateY(0)}
 .drop-item{display:flex;align-items:flex-start;gap:11px;padding:10px 12px;border-radius:9px;transition:.15s;text-decoration:none;color:inherit}
 .drop-item:hover{background:var(--blue-3)}
-.drop-item-ico{font-size:20px;flex-shrink:0;margin-top:1px;width:28px;text-align:center}
+.drop-item-ico{font-size:20px;flex-shrink:0;margin-top:1px;width:28px;height:28px;text-align:center;display:flex;align-items:center;justify-content:center}
+.drop-item-ico svg{width:20px;height:20px;flex-shrink:0}
 .drop-item-text strong{display:block;font-size:13px;color:var(--gray-900);font-weight:600;line-height:1.35}
 .drop-item-text span{font-size:11.5px;color:var(--gray-500);line-height:1.4}
 .drop-divider{height:1px;background:var(--gray-200);margin:6px 0}
@@ -140,7 +141,8 @@ nav.light .hamburger span{background:var(--gray-700)}
 .orbit-node-inner{width:62px;height:62px;border-radius:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(10px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;animation:orbitSpinRev 24s linear infinite;transition:.2s}
 .orbit-node-inner:hover{background:rgba(255,255,255,.15);border-color:rgba(96,165,250,.5);box-shadow:0 0 16px rgba(96,165,250,.25)}
 @keyframes orbitSpinRev{to{transform:rotate(-360deg)}}
-.orbit-node-ico{font-size:22px;line-height:1;display:block}
+.orbit-node-ico{font-size:22px;line-height:1;display:flex;align-items:center;justify-content:center;width:26px;height:26px}
+.orbit-node-ico svg{width:22px;height:22px;flex-shrink:0}
 .orbit-node-lbl{font-size:8px;font-weight:700;color:rgba(255,255,255,.75);text-align:center;line-height:1.25;white-space:nowrap}
 
 /* ── STATS BAR ──────────────────────────────────── */
