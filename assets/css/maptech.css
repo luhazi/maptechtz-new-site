@@ -195,13 +195,16 @@ section{padding:88px 0}
 .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--blue-2));transform:scaleX(0);transform-origin:left;transition:.3s}
 .svc-card:hover{border-color:rgba(61,117,186,.5);box-shadow:0 8px 32px rgba(61,117,186,.11);transform:translateY(-4px)}
 .svc-card:hover::before{transform:scaleX(1)}
-.svc-icon{width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:16px}
-.ic-blue{background:var(--blue-3);color:var(--blue)}
-.ic-red{background:#fef2f2;color:#dc2626}
-.ic-green{background:#f0fdf4;color:#059669}
-.ic-amber{background:#fffbeb;color:#d97706}
-.ic-purple{background:#faf5ff;color:#7c3aed}
-.ic-teal{background:#f0fdfa;color:#0d9488}
+/* ── SERVICE ICON — TSL-style circle ──────────────── */
+.svc-icon{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:20px;position:relative;flex-shrink:0;transition:var(--t)}
+.svc-icon::after{content:'';position:absolute;inset:-5px;border-radius:50%;border:1.5px dashed currentColor;opacity:.22;transition:var(--t)}
+.svc-card:hover .svc-icon::after{opacity:.5;transform:rotate(30deg)}
+.ic-blue{background:linear-gradient(135deg,#eaf2fb 0%,#d4e8f6 100%);color:var(--blue)}
+.ic-red{background:linear-gradient(135deg,#fff0f0 0%,#fce4e4 100%);color:var(--red)}
+.ic-green{background:linear-gradient(135deg,#f0fdf4,#dcfce7);color:#059669}
+.ic-amber{background:linear-gradient(135deg,#fffbeb,#fef3c7);color:#d97706}
+.ic-purple{background:linear-gradient(135deg,#faf5ff,#ede9fe);color:#7c3aed}
+.ic-teal{background:linear-gradient(135deg,#f0fdfa,#ccfbf1);color:#0d9488}
 .svc-card h3{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:800;color:var(--gray-900);margin-bottom:8px}
 .svc-card p{font-size:13.5px;color:var(--gray-500);line-height:1.7;margin-bottom:14px}
 .svc-link{font-size:13px;color:var(--blue);font-weight:700;display:inline-flex;align-items:center;gap:5px;transition:var(--t)}
@@ -222,12 +225,13 @@ section{padding:88px 0}
 .section-dark .svc-card .svc-link{color:#7ab3e0}
 .section-dark .svc-card .svc-tag{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);color:rgba(255,255,255,.55)}
 .section-dark .svc-num{color:rgba(255,255,255,.03)}
-.section-dark .ic-red{background:rgba(220,38,38,.18);color:#fca5a5}
+.section-dark .ic-red{background:rgba(232,29,37,.18);color:#fca5a5}
 .section-dark .ic-blue{background:rgba(61,117,186,.25);color:#a8ccec}
 .section-dark .ic-purple{background:rgba(124,58,237,.18);color:#c4b5fd}
 .section-dark .ic-teal{background:rgba(13,148,136,.18);color:#5eead4}
 .section-dark .ic-amber{background:rgba(217,119,6,.18);color:#fcd34d}
 .section-dark .ic-green{background:rgba(5,150,105,.18);color:#6ee7b7}
+.section-dark .svc-icon::after{opacity:.15}
 
 /* ── TYPOGRAPHY UPGRADES ─────────────────────────── */
 .stag{letter-spacing:.12em}
@@ -514,7 +518,10 @@ footer{background:var(--gray-900);color:#94a3b8;padding:64px 0 0}
 .industry-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
 .ind-card{background:#fff;border:1.5px solid var(--gray-200);border-radius:var(--r);padding:26px 14px;text-align:center;transition:var(--t);cursor:default}
 .ind-card:hover{border-color:var(--blue);transform:translateY(-4px);box-shadow:var(--shadow-md);background:var(--blue-3)}
-.ind-ico{font-size:36px;margin-bottom:10px;display:block}
+.ind-ico{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#eaf2fb,#d4e8f6);color:var(--blue);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;position:relative;transition:var(--t)}
+.ind-ico::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1.5px dashed var(--blue);opacity:.2;transition:var(--t)}
+.ind-card:hover .ind-ico{background:linear-gradient(135deg,var(--blue),#1a5a9e);color:#fff}
+.ind-card:hover .ind-ico::after{opacity:.5;transform:rotate(45deg)}
 .ind-card h4{font-size:13px;font-weight:700;color:var(--gray-900);line-height:1.3;margin-bottom:3px}
 .ind-card p{font-size:11.5px;color:var(--gray-400);line-height:1.4}
 
@@ -693,7 +700,7 @@ footer{background:var(--gray-900);color:#94a3b8;padding:64px 0 0}
   /* Industries */
   .industry-grid{grid-template-columns:repeat(2,1fr)}
   .ind-card{padding:18px 10px}
-  .ind-ico{font-size:28px}
+  .ind-ico{width:46px;height:46px}
   .ind-card h4{font-size:12px}
 
   /* Projects */
