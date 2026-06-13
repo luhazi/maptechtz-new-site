@@ -178,6 +178,7 @@ section{padding:88px 0}
 
 /* ── CLIENTS MARQUEE ─────────────────────────────── */
 .clients-bar{background:#f8fafc;padding:36px 0;overflow:hidden;border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200)}
+.cl-badge{display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:8px;font-weight:900;padding:3px 6px;border-radius:3px;font-family:'Montserrat',sans-serif;letter-spacing:.02em;line-height:1;flex-shrink:0;margin-right:3px}
 .clients-hd{text-align:center;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--gray-400);margin-bottom:24px}
 .clients-track{overflow:hidden;width:100%;mask-image:linear-gradient(to right,transparent 0%,black 8%,black 92%,transparent 100%);-webkit-mask-image:linear-gradient(to right,transparent 0%,black 8%,black 92%,transparent 100%)}
 .clients-inner{display:inline-flex;align-items:center;gap:52px;white-space:nowrap;animation:marquee-clients 42s linear infinite;padding:0 28px}

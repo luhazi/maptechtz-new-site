@@ -79,3 +79,38 @@ function rejectCookies(){
   const banner = document.getElementById('cookie-banner');
   if(banner) banner.classList.remove('show');
 }
+
+// ── STAT COUNTER ANIMATION ────────────────────────────
+(function(){
+  var nums = document.querySelectorAll('.stat-num');
+  if(!nums.length) return;
+  var fired = false;
+
+  function easeOut(t){ return 1 - Math.pow(1 - t, 3); }
+
+  function runCounters(){
+    if(fired) return;
+    fired = true;
+    nums.forEach(function(el){
+      var raw    = el.textContent.trim();
+      var target = parseInt(raw.replace(/\D/g,''), 10);
+      var suffix = raw.replace(/[\d]/g,'');   // e.g. "+"
+      if(!target) return;
+      var dur = 2200, ts = null;
+      function step(now){
+        if(!ts) ts = now;
+        var p = Math.min((now - ts) / dur, 1);
+        el.textContent = Math.round(easeOut(p) * target) + suffix;
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
+  var bar = document.querySelector('.stats-bar');
+  if(!bar){ runCounters(); return; }
+
+  new IntersectionObserver(function(entries){
+    if(entries[0].isIntersecting) runCounters();
+  }, { threshold: 0.4 }).observe(bar);
+})();
