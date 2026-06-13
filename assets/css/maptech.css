@@ -847,4 +847,25 @@ section:not(.section-dark) .svc-group-label::after{background:var(--gray-200)!im
 
 /* 7. WHY SECTION — red numbered squares (TSL pattern), blue badge */
 .wf-num{width:40px;height:40px;min-width:40px;border-radius:10px;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:900;flex-shrink:0;margin-top:2px}
-.why-badge{background:rgba(61,117,186,.1)!important;border:1px solid rgba(61,117,186,.25)!important;border-r
+.why-badge{background:rgba(61,117,186,.1)!important;border:1px solid rgba(61,117,186,.25)!important;border-radius:10px;padding:12px 16px;margin-top:16px}
+.why-badge p{color:var(--blue)!important}
+.why-badge span{color:var(--gray-500)!important}
+
+/* 8. TESTIMONIALS — RED stars (TSL testimonials pattern) */
+.testi-dk .stars{color:var(--red)!important}
+
+/* 9. CTA SPLIT — full BLUE bg, contact channels (TSL CTA pattern) */
+.cta-split{background:var(--blue)!important}
+.cta-split::before{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px)!important}
+.cta-split::after{background:radial-gradient(circle,rgba(14,16,75,.12),transparent 70%)!important}
+.cta-channels .cch{background:rgba(255,255,255,.1)!important;border-color:rgba(255,255,255,.2)!important}
+.cta-channels .cch:hover{background:rgba(255,255,255,.18)!important;border-color:rgba(255,255,255,.35)!important;transform:translateX(5px)!important}
+.cch-ico{background:rgba(14,16,75,.25)!important}
+
+/* 10. FOOTER — deep navy, RED logo accent, red headings + hovers */
+footer{background:#07082e!important}
+.fb-logo span{color:var(--red)!important}
+.fb-logo-bar{width:30px;height:3px;background:var(--red);border-radius:2px;margin-bottom:12px}
+.fc h4{color:rgba(255,255,255,.75)!important;padding-bottom:7px!important;border-bottom:2px solid var(--red)!important;display:inline-block!important;margin-bottom:14px!important;text-transform:none!important;font-size:13.5px!important;letter-spacing:0!important}
+.fc a:hover{color:var(--red)!important}
+.footer-bottom a:hover{color:var(--red)!important}
