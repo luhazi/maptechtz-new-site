@@ -123,8 +123,18 @@
 </div>
 
 <!-- Quick Trust Bar -->
+<style>
+/* about.html mobile fixes */
+@media(max-width:640px){
+  .about-trust-inner{grid-template-columns:1fr 1fr!important}
+  .about-trust-inner > div:nth-child(2){border-right:none!important}
+  .about-trust-inner > div:nth-child(3){border-top:1px solid var(--gray-200)!important}
+  .about-trust-inner > div:nth-child(4){border-top:1px solid var(--gray-200)!important}
+  .why-feats-about{grid-template-columns:1fr!important}
+}
+</style>
 <div style="background:#fff;border-bottom:1px solid var(--gray-200)">
-  <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr)">
+  <div class="about-trust-inner" style="max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr)">
     <div style="padding:24px 20px;text-align:center;border-right:1px solid var(--gray-200)">
       <div style="font-family:'Montserrat',sans-serif;font-size:32px;font-weight:900;color:var(--blue);line-height:1;letter-spacing:-1px">150+</div>
       <div style="font-size:12px;color:var(--gray-500);margin-top:4px;text-transform:uppercase;letter-spacing:.06em;font-weight:600">Projects Delivered</div>
@@ -320,7 +330,7 @@
 <section id="why">
   <div class="si">
     <div class="sh fade-up"><div class="stag">Why Choose Us</div><div class="section-title">What Sets Maptech Apart</div><p class="section-sub">Six reasons why Tanzania's businesses choose Maptech — and stay with us for years</p></div>
-    <div class="why-feats" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:100%">
+    <div class="why-feats why-feats-about" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:100%">
       <div class="wf fade-up"><div class="wf-icon">&#x1F3C6;</div><div><h4>Certified Professionals</h4><p>Every service is delivered by qualified engineers and specialists — CCNA, CEH-certified and industry-recognised across ICT disciplines.</p></div></div>
       <div class="wf fade-up"><div class="wf-icon">&#x23F1;&#xFE0F;</div><div><h4>On-Time Delivery</h4><p>We set realistic timelines and honour them — always. Our structured project management keeps every engagement on schedule and on budget.</p></div></div>
       <div class="wf fade-up"><div class="wf-icon">&#x1F4CB;</div><div><h4>Transparent Pricing</h4><p>No hidden fees or surprise invoices. We provide detailed, itemised proposals so you know exactly what you are paying for before any work begins.</p></div></div>

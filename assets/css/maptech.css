@@ -1,6 +1,6 @@
 /* ── RESET ──────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 body{font-family:'Inter',system-ui,sans-serif;color:#1e293b;background:#fff;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{text-decoration:none;color:inherit}img{max-width:100%;display:block}button{cursor:pointer;font-family:inherit}ul{list-style:none}
 
@@ -716,8 +716,9 @@ footer{background:var(--gray-900);color:#94a3b8;padding:64px 0 0}
 
   /* Page hero */
   .page-hero{padding:100px 0 44px}
-  .page-hero h1{font-size:26px}
+  .page-hero h1{font-size:26px;word-break:break-word;hyphens:none}
   .page-hero p{font-size:14px}
+  .ph-inner{padding:0 20px}
 
   /* Footer */
   .fi{grid-template-columns:1fr;gap:28px}
@@ -793,6 +794,10 @@ nav{background:rgba(255,255,255,.97)!important;border-bottom:1px solid var(--gra
 nav.light{background:rgba(255,255,255,.97)!important;border-color:var(--gray-200)!important}
 .logo-name{color:var(--gray-900)!important}
 .logo-name span{color:var(--blue)!important}
+/* Mobile nav: dark bg — logo must be white */
+.mob-nav .logo-name{color:#fff!important}
+.mob-nav .logo-name span{color:#7ab3e0!important}
+.mob-nav .logo-mark{background:var(--blue)!important}
 nav .nav-links a{color:var(--gray-700)!important}
 nav .nav-links a:hover,nav .nav-links a.active{color:var(--blue)!important;background:var(--blue-3)!important}
 .hamburger span{background:var(--gray-700)!important}
