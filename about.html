@@ -193,6 +193,38 @@
 </section>
 
 <!-- Team / Visionary Leaders -->
+<style>
+/* ── LEADER CAROUSEL (self-contained) ────────────────── */
+#team .leader-carousel{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 8px 48px rgba(0,0,0,.10);background:#fff;border:1.5px solid #e5e7eb;margin-top:12px}
+#team .lc-slide{display:none;grid-template-columns:1fr 1fr;min-height:500px}
+#team .lc-slide.active{display:grid!important}
+#team .lc-photo{position:relative;overflow:hidden;background:#f3f4f6;min-height:500px}
+#team .lc-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;position:absolute;inset:0}
+#team .lc-photo-fallback{width:100%;height:100%;min-height:500px;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#0d1c2e,#1e3a6e)}
+#team .lc-initials{width:130px;height:130px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:46px;font-weight:900;color:#fff}
+#team .lc-info{padding:52px 48px 80px;display:flex;flex-direction:column;justify-content:center}
+#team .lc-tag{display:inline-block;background:#f3f4f6;border:1px solid #e5e7eb;color:#6b7280;font-size:10.5px;font-weight:700;padding:4px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:.07em;margin-bottom:20px;align-self:flex-start}
+#team .lc-name{font-family:'Montserrat',sans-serif;font-size:30px;font-weight:900;color:#0d1c2e;margin:0 0 8px;line-height:1.15}
+#team .lc-role{font-size:15px;font-weight:600;color:#3d75ba;margin-bottom:22px}
+#team .lc-bio{font-size:14.5px;color:#6b7280;line-height:1.78;margin-bottom:24px}
+#team .lc-socials{display:flex;gap:10px}
+#team .lc-social{width:36px;height:36px;border-radius:50%;border:1.5px solid #e5e7eb;display:flex;align-items:center;justify-content:center;color:#9ca3af;text-decoration:none;transition:.2s}
+#team .lc-social:hover{border-color:#3d75ba;color:#3d75ba;background:#eaf2fb}
+#team .lc-controls{position:absolute;bottom:28px;right:44px;display:flex;align-items:center;gap:10px}
+#team .lc-arrow{width:36px;height:36px;border-radius:50%;border:1.5px solid #e5e7eb;background:#fff;cursor:pointer;font-size:22px;color:#6b7280;transition:.2s;display:flex;align-items:center;justify-content:center;padding:0;line-height:1}
+#team .lc-arrow:hover{border-color:#3d75ba;color:#3d75ba;background:#eaf2fb}
+#team .lc-dots{display:flex;align-items:center;gap:6px}
+#team .lc-dot{width:8px;height:8px;border-radius:50%;background:#d1d5db;cursor:pointer;transition:.25s;border:none;padding:0}
+#team .lc-dot.active{background:#e81d25;width:22px;border-radius:4px}
+@media(max-width:768px){
+  #team .lc-slide.active{grid-template-columns:1fr!important;grid-template-rows:320px auto}
+  #team .lc-photo{min-height:320px}
+  #team .lc-info{padding:30px 26px 72px}
+  #team .lc-name{font-size:22px}
+  #team .lc-controls{right:24px;bottom:20px}
+}
+</style>
+
 <section id="team">
   <div class="si">
     <div class="sh fade-up">
@@ -207,8 +239,8 @@
       <!-- Slide 1: CEO -->
       <div class="lc-slide active">
         <div class="lc-photo">
-          <img src="assets/images/team-yudathade-munishi.jpg" alt="Eng. Yudathade Munishi — CEO Maptech"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/images/team-yudathade-munishi.jpg" alt="Eng. Yudathade Munishi"
+               onerror="this.style.display='none';this.nextElementSibling.style.cssText='display:flex!important'">
           <div class="lc-photo-fallback" style="display:none">
             <div class="lc-initials" style="background:linear-gradient(135deg,#3d75ba,#1a6bd4)">YM</div>
           </div>
@@ -229,8 +261,8 @@
       <!-- Slide 2: Developer -->
       <div class="lc-slide">
         <div class="lc-photo">
-          <img src="assets/images/team-michael-haji.jpg" alt="Michael Haji — Developer Maptech"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <img src="assets/images/team-michael-haji.jpg" alt="Michael Haji"
+               onerror="this.style.display='none';this.nextElementSibling.style.cssText='display:flex!important'">
           <div class="lc-photo-fallback" style="display:none">
             <div class="lc-initials" style="background:linear-gradient(135deg,#1a4f8a,#3d75ba)">MH</div>
           </div>
@@ -250,9 +282,9 @@
 
       <!-- Controls -->
       <div class="lc-controls">
-        <button class="lc-arrow lc-prev" onclick="lcNav(-1)" aria-label="Previous leader">&#x2039;</button>
+        <button class="lc-arrow lc-prev" onclick="lcNav(-1)" aria-label="Previous">&#x2039;</button>
         <div class="lc-dots" id="lcDots"></div>
-        <button class="lc-arrow lc-next" onclick="lcNav(1)" aria-label="Next leader">&#x203A;</button>
+        <button class="lc-arrow lc-next" onclick="lcNav(1)" aria-label="Next">&#x203A;</button>
       </div>
     </div>
     <!-- /Leader Carousel -->
@@ -262,30 +294,24 @@
 
 <script>
 (function(){
-  var slides = document.querySelectorAll('.lc-slide');
+  var slides = document.querySelectorAll('#leaderCarousel .lc-slide');
   var dotsWrap = document.getElementById('lcDots');
   var cur = 0;
   if(!slides.length) return;
-
-  // Build dots
   slides.forEach(function(_,i){
-    var d = document.createElement('span');
+    var d = document.createElement('button');
     d.className = 'lc-dot' + (i===0?' active':'');
-    d.setAttribute('data-i', i);
+    d.setAttribute('data-i',i);
     d.onclick = function(){ lcGo(+this.dataset.i); };
     dotsWrap.appendChild(d);
   });
-
-  window.lcNav = function(dir){
-    lcGo((cur + dir + slides.length) % slides.length);
-  };
-
+  window.lcNav = function(dir){ lcGo((cur+dir+slides.length)%slides.length); };
   function lcGo(n){
     slides[cur].classList.remove('active');
-    document.querySelectorAll('.lc-dot')[cur].classList.remove('active');
+    document.querySelectorAll('#leaderCarousel .lc-dot')[cur].classList.remove('active');
     cur = n;
     slides[cur].classList.add('active');
-    document.querySelectorAll('.lc-dot')[cur].classList.add('active');
+    document.querySelectorAll('#leaderCarousel .lc-dot')[cur].classList.add('active');
   }
 })();
 </script>
