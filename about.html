@@ -192,22 +192,103 @@
   </div>
 </section>
 
-<!-- Team -->
+<!-- Team / Visionary Leaders -->
 <section id="team">
   <div class="si">
-    <div class="sh fade-up"><div class="stag">Our People</div><div class="section-title">Leadership &amp; Team</div><p class="section-sub">The certified professionals and co-founders driving Maptech's success</p></div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px;overflow:hidden;border-radius:14px">
-        <img src="assets/images/about-african-business-meeting.jpg" alt="Maptech team meeting" style="width:100%;height:200px;object-fit:cover;border-radius:14px">
-        <img src="assets/images/about-african-tech-team.jpg" alt="Maptech tech team" style="width:100%;height:200px;object-fit:cover;border-radius:14px">
-      </div>
-      <div class="team-grid">
-      <div class="team-card fade-up"><div class="team-avatar" style="background:linear-gradient(135deg,#3d75ba,#1a6bd4)">CEO</div><h4>Chief Executive</h4><div class="role">Strategy &amp; Leadership</div><div class="bio">Leads company vision, enterprise partnerships and business growth across Tanzania</div></div>
-      <div class="team-card fade-up"><div class="team-avatar" style="background:linear-gradient(135deg,#6d28d9,#8b5cf6)">DEV</div><h4>Lead Developer</h4><div class="role">Software &amp; Web Engineering</div><div class="bio">Full-stack development, API architecture and custom software delivery</div></div>
-      <div class="team-card fade-up"><div class="team-avatar" style="background:linear-gradient(135deg,#0d9488,#14b8a6)">NET</div><h4>Network Engineer</h4><div class="role">Infrastructure &amp; Security</div><div class="bio">Cisco-certified specialist in networking, CCTV and IT infrastructure deployments</div></div>
-      <div class="team-card fade-up"><div class="team-avatar" style="background:linear-gradient(135deg,#d97706,#f59e0b)">CRE</div><h4>Creative Director</h4><div class="role">Design &amp; Marketing</div><div class="bio">Brand identity, UI/UX design, SEO and digital marketing campaigns</div></div>
+    <div class="sh fade-up">
+      <div class="stag">Our People</div>
+      <div class="section-title">Meet Our Visionary Leaders</div>
+      <p class="section-sub">The innovative minds driving Maptech's success and shaping the future of technology</p>
     </div>
+
+    <!-- Leader Carousel -->
+    <div class="leader-carousel" id="leaderCarousel">
+
+      <!-- Slide 1: CEO -->
+      <div class="lc-slide active">
+        <div class="lc-photo">
+          <img src="assets/images/team-yudathade-munishi.jpg" alt="Eng. Yudathade Munishi — CEO Maptech"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="lc-photo-fallback" style="display:none">
+            <div class="lc-initials" style="background:linear-gradient(135deg,#3d75ba,#1a6bd4)">YM</div>
+          </div>
+        </div>
+        <div class="lc-info">
+          <span class="lc-tag">Leadership</span>
+          <h3 class="lc-name">Eng. Yudathade Munishi</h3>
+          <div class="lc-role">Chief Executive Officer</div>
+          <p class="lc-bio">The CEO of Maptech, an innovative tech company focused on building modern digital solutions. With a strong engineering background, he leads with a practical, problem-solving approach and a clear vision for growth. He is passionate about advancing technology in Tanzania and empowering the next generation of innovators.</p>
+          <div class="lc-socials">
+            <a href="mailto:ceo@maptech.co.tz" class="lc-social" title="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Developer -->
+      <div class="lc-slide">
+        <div class="lc-photo">
+          <img src="assets/images/team-michael-haji.jpg" alt="Michael Haji — Developer Maptech"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="lc-photo-fallback" style="display:none">
+            <div class="lc-initials" style="background:linear-gradient(135deg,#1a4f8a,#3d75ba)">MH</div>
+          </div>
+        </div>
+        <div class="lc-info">
+          <span class="lc-tag">Leadership</span>
+          <h3 class="lc-name">Michael Haji</h3>
+          <div class="lc-role">Developer</div>
+          <p class="lc-bio">Passionate tech enthusiast and creative developer with growing expertise in web development, networking, cybersecurity, and digital design. Skilled in building modern, responsive websites and transforming ideas into functional digital experiences. Driven by continuous learning, innovation, and creating impactful user-friendly solutions.</p>
+          <div class="lc-socials">
+            <a href="mailto:dev@maptech.co.tz" class="lc-social" title="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="lc-controls">
+        <button class="lc-arrow lc-prev" onclick="lcNav(-1)" aria-label="Previous leader">&#x2039;</button>
+        <div class="lc-dots" id="lcDots"></div>
+        <button class="lc-arrow lc-next" onclick="lcNav(1)" aria-label="Next leader">&#x203A;</button>
+      </div>
+    </div>
+    <!-- /Leader Carousel -->
+
   </div>
 </section>
+
+<script>
+(function(){
+  var slides = document.querySelectorAll('.lc-slide');
+  var dotsWrap = document.getElementById('lcDots');
+  var cur = 0;
+  if(!slides.length) return;
+
+  // Build dots
+  slides.forEach(function(_,i){
+    var d = document.createElement('span');
+    d.className = 'lc-dot' + (i===0?' active':'');
+    d.setAttribute('data-i', i);
+    d.onclick = function(){ lcGo(+this.dataset.i); };
+    dotsWrap.appendChild(d);
+  });
+
+  window.lcNav = function(dir){
+    lcGo((cur + dir + slides.length) % slides.length);
+  };
+
+  function lcGo(n){
+    slides[cur].classList.remove('active');
+    document.querySelectorAll('.lc-dot')[cur].classList.remove('active');
+    cur = n;
+    slides[cur].classList.add('active');
+    document.querySelectorAll('.lc-dot')[cur].classList.add('active');
+  }
+})();
+</script>
 
 <!-- Why Choose Us -->
 <section id="why">
